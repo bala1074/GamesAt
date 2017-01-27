@@ -12,16 +12,6 @@ var configDB = require('./config/database.js');
 var app=express();
 
 
-/*
-//to receive post req body
-app.use(bodyParser.urlencoded({ extended: false }));
-
-
-
-//set values
-app.set("view engine",'ejs');
-*/
-
 // configuration ===============================================================
 mongoose.connect(configDB.url); // connect to our database
 
