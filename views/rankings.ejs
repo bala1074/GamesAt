@@ -1,0 +1,112 @@
+<% include partials/header %>
+<% var rankings=rankingsdata;
+%>
+<script>
+    $(document).ready(function(){
+    $('#activate_nav li').removeClass("active");
+    $('#tab3').addClass("active");
+    });
+</script>
+<div class="container">
+    <center style="margin: auto;" >
+        <div class="row" style="padding: 25px">
+            <div class="col-sm-1" >
+            </div>
+            <div class="col-sm-1" >
+            </div>
+            <div class="col-sm-1" >
+                <%if (rankings !='cricket') { %>
+                <a href="/rankings?game=cricket">
+                    <img id="toggleImage_cricket"  width="45px" height="45px"  src="/assets/0cricket.png"/>
+                </a>
+                <% } %>
+
+                <%if (rankings == 'cricket') { %>
+                <a href="/rankings?game=cricket">
+                    <img id="toggleImage_cricket"  width="45px" height="45px"  src="/assets/1cricket.png"/>
+                </a>
+                <% } %>
+
+            </div>
+            <div class="col-sm-1">
+                <%if (rankings != 'badminton') { %>
+                <a href="/rankings?game=badminton">
+                    <img id="toggleImage_badminton"  width="45px" height="45px"  src="/assets/0badminton.png"/>
+                </a>
+                <% } %>
+
+                <%if (rankings == 'badminton') { %>
+                <a href="/rankings?game=badminton">
+                    <img id="toggleImage_badminton"  width="45px" height="45px"  src="/assets/1badminton.png"/>
+                </a>
+                <% } %>
+            </div>
+            <div class="col-sm-1">
+                <%if (rankings != 'tabletennis') { %>
+                <a href="/rankings?game=tabletennis">
+                    <img id="toggleImage_tabletennis"  width="45px" height="45px"  src="/assets/0tabletennis.png"/>
+                </a>
+                <% } %>
+
+                <%if (rankings == 'tabletennis') { %>
+                <a href="/rankings?game=tabletennis">
+                    <img id="toggleImage_tabletennis"  width="45px" height="45px"  src="/assets/1tabletennis.png"/>
+                </a>
+                <% } %>        </div>
+            <div class="col-sm-1">
+                <%if (rankings != 'chess') { %>
+                <a href="/rankings?game=chess">
+                    <img id="toggleImage_chess"  width="45px" height="45px"  src="/assets/0chess.png"/>
+                </a>
+                <% } %>
+
+                <%if (rankings == 'chess') { %>
+                <a href="/rankings?game=chess">
+                    <img id="toggleImage_chess"  width="45px" height="45px"  src="/assets/1chess.png"/>
+                </a>
+                <% } %>
+            </div>
+            <div class="col-sm-1">
+                <%if (rankings != 'bowling') { %>
+                <a href="/rankings?game=bowling">
+                    <img id="toggleImage_bowling"  width="45px" height="45px"  src="/assets/0bowling.png"/>
+                </a>
+                <% } %>
+
+                <%if (rankings == 'bowling' ) { %>
+                <a href="/rankings?game=bowling">
+                    <img id="toggleImage_bowling"  width="45px" height="45px"  src="/assets/1bowling.png"/>
+                </a>
+                <% } %>
+            </div>
+            <div class="col-sm-1">
+                <%if (rankings != 'gokarting') { %>
+                <a href="/rankings?game=gokarting">
+                    <img id="toggleImage_gokarting"  width="45px" height="45px"  src="/assets/0gokarting.png"/>
+                </a>
+                <% } %>
+
+                <%if (rankings == 'gokarting') { %>
+                <a href="/rankings?game=gokarting">
+                    <img id="toggleImage_gokarting"  width="45px" height="45px"  src="/assets/1gokarting.png"/>
+                </a>
+                <% } %>
+            </div>
+            <div class="col-sm-1">
+                <%if (rankings != 'basketball') { %>
+                <a href="/rankings?game=basketball">
+                    <img id="toggleImage_basketball"  width="45px" height="45px"  src="/assets/0basketball.png"/>
+                </a>
+                <% } %>
+
+                <%if (rankings == 'basketball') { %>
+                <a href="/rankings?game=basketball">
+                    <img id="toggleImage_basketball"  width="45px" height="45px"  src="/assets/1basketball.png"/>
+                </a>
+                <% } %>
+            </div>
+        </div>
+    </center>
+    <center><h3><strong>Rankings will update soon..</strong></h3></center>
+</div>
+<% include partials/footer %>

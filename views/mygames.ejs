@@ -1,0 +1,110 @@
+<% include partials/header %>
+<% var mygames=JSON.parse(JSON.stringify(mygamesdata))[0];
+%>
+<script>
+    $(document).ready(function(){
+        $('#activate_nav li').removeClass("active");
+        $('#tab4').addClass("active");
+    });
+
+</script>
+<div class="container">
+    <h1>Game</h1>
+    <p>Pick a game</p>
+    <div class="row" style="padding: 25px">
+        <div class="col-sm-3" >
+            <%if (mygames.cricket == 0) { %>
+            <a href="/mygames?game=cricket&flag=1">
+                <img id="toggleImage_cricket" src="/assets/0cricket.png"/>
+            </a>
+            <% } %>
+
+            <%if (mygames.cricket == 1) { %>
+                <a href="/mygames?game=cricket&flag=0">
+                    <img id="toggleImage_cricket" src="/assets/1cricket.png"/>
+                </a>
+            <% } %>
+
+        </div>
+        <div class="col-sm-3">
+            <%if (mygames.badminton == 0) { %>
+            <a href="/mygames?game=badminton&flag=1">
+                <img id="toggleImage_badminton" src="/assets/0badminton.png"/>
+            </a>
+            <% } %>
+
+            <%if (mygames.badminton == 1) { %>
+            <a href="/mygames?game=badminton&flag=0">
+                <img id="toggleImage_badminton" src="/assets/1badminton.png"/>
+            </a>
+            <% } %>
+        </div>
+        <div class="col-sm-3">
+            <%if (mygames.tabletennis == 0) { %>
+            <a href="/mygames?game=tabletennis&flag=1">
+                <img id="toggleImage_tabletennis" src="/assets/0tabletennis.png"/>
+            </a>
+            <% } %>
+
+            <%if (mygames.tabletennis == 1) { %>
+            <a href="/mygames?game=tabletennis&flag=0">
+                <img id="toggleImage_tabletennis" src="/assets/1tabletennis.png"/>
+            </a>
+            <% } %>        </div>
+        <div class="col-sm-3">
+            <%if (mygames.chess == 0) { %>
+            <a href="/mygames?game=chess&flag=1">
+                <img id="toggleImage_chess" src="/assets/0chess.png"/>
+            </a>
+            <% } %>
+
+            <%if (mygames.chess == 1) { %>
+            <a href="/mygames?game=chess&flag=0">
+                <img id="toggleImage_chess" src="/assets/1chess.png"/>
+            </a>
+            <% } %>
+        </div>
+    </div>
+    <div class="row" style="padding: 25px">
+        <div class="col-sm-3">
+            <%if (mygames.bowling == 0) { %>
+            <a href="/mygames?game=bowling&flag=1">
+                <img id="toggleImage_bowling" src="/assets/0bowling.png"/>
+            </a>
+            <% } %>
+
+            <%if (mygames.bowling == 1) { %>
+            <a href="/mygames?game=bowling&flag=0">
+                <img id="toggleImage_bowling" src="/assets/1bowling.png"/>
+            </a>
+            <% } %>
+        </div>
+        <div class="col-sm-3">
+            <%if (mygames.gokarting == 0) { %>
+            <a href="/mygames?game=gokarting&flag=1">
+                <img id="toggleImage_gokarting" src="/assets/0gokarting.png"/>
+            </a>
+            <% } %>
+
+            <%if (mygames.gokarting == 1) { %>
+            <a href="/mygames?game=gokarting&flag=0">
+                <img id="toggleImage_gokarting" src="/assets/1gokarting.png"/>
+            </a>
+            <% } %>
+        </div>
+        <div class="col-sm-3">
+            <%if (mygames.basketball == 0) { %>
+            <a href="/mygames?game=basketball&flag=1">
+                <img id="toggleImage_basketball" src="/assets/0basketball.png"/>
+            </a>
+            <% } %>
+
+            <%if (mygames.basketball == 1) { %>
+            <a href="/mygames?game=basketball&flag=0">
+                <img id="toggleImage_basketball" src="/assets/1basketball.png"/>
+            </a>
+            <% } %>
+        </div>
+    </div>
+</div>
+<% include partials/footer %>

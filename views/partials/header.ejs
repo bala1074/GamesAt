@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>GamesAt</title>
+        <link href="/vendor/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="/vendor/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="/vendor/bootstrap.min.js" ></script>
+        <script src="/vendor/bootstrap-datetimepicker.min.js" ></script>
+        <link href="/css/app.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+        <script src="/script/app.js" ></script>
+        <script>
+            console.log("yess "+localStorage.getItem("activetab"));
+            function changeTab(val){
+                localStorage.setItem("activetab",val);
+            }
+        </script>
+    </head>
+    
+    <body>
+
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">GamesAt</a>
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav" id="activate_nav">
+                        <li id="tab1" onclick="changeTab('tab1')"><a href="games">Games</a></li>
+                        <li id="tab2" onclick="changeTab('tab2')"> <a href="hostgame">Host</a></li>
+                        <li id="tab3" onclick="changeTab('tab3')"><a href="rankings">Rankings</a></li>
+                        <li id="tab4" onclick="changeTab('tab4')"><a href="mygames">MyGames</a></li>
+                        <li id="tab5" onclick="changeTab('tab5')"><a href="about">About</a></li>
+                        <li id="tab6" onclick="changeTab('tab6')"><a href="contact">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right" id="profile" hidden>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <strong id="nickname">Nickname</strong>
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div class="navbar-login">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <p class="text-center">
+                                                    <span class="glyphicon glyphicon-user icon-size" id="default_pic" hidden></span>
+                                                    <img hidden src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg" id="profile_pic"  width="75px" height="75px">
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <p class="text-left"><strong id="name"></strong></p>
+                                                <p class="text-left small" id="email"></p>
+                                                <p class="text-left">
+                                                    <a href="/profile" class="btn btn-primary btn-block btn-sm">Profile</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider navbar-login-session-bg"></li>
+                                <!--
+                                <li><a href="#">Account Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">User stats <span class="glyphicon glyphicon-stats pull-right"></span></a></li>
+                                <li class="divider"></li>-->
+                                <!--<li><a href="#">Messages <span class="badge pull-right"> 42 </span></a></li>
+                                <li class="divider"></li>-->
+                                <!--<li><a href="#">Favourites Snippets <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
+                                <li class="divider"></li>-->
+                                <li><a href="/logout">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right" id="login" hidden>
+                            <a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container" id="profile_update_warning">
+            <div class="alert alert-warning">
+                <strong>Warning!</strong> Please update you profile <a href="/profile">Profile</a>
+            </div>
+        </div>

@@ -1,0 +1,34 @@
+        <footer class="footer">
+            <div class="container">
+                <p class="text-muted">gamesat@2017</p>
+            </div>
+        </footer>
+        <script>
+            if(localStorage.getItem("email")=="0") {
+                $('#profile').hide();
+                $('#login').show();
+            }else{
+                $('#profile').show();
+                $('#login').hide();
+                $('#name').html(localStorage.getItem("name"));
+                $('#email').html(localStorage.getItem("email"));
+            }
+
+            if(localStorage.getItem("picture").toString() == "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg"){
+                $('#default_pic').show();
+                $('#profile_pic').hide();
+            }
+            else{
+                $('#default_pic').hide();
+                $('#profile_pic').show();
+                $("#profile_pic").attr("src",localStorage.getItem("picture").toString());
+            }
+            $("#nickname").html(localStorage.getItem("nickname"));
+            if($("#nickname").text()=="Nickname"){
+                $("#profile_update_warning").show();
+            }
+            else
+                $("#profile_update_warning").hide();
+        </script>
+    </body>
+</html>

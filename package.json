@@ -2,10 +2,25 @@
   "name": "gameat",
   "version": "1.0.0",
   "description": "to track games",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "bala",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "latest",
+    "connect-flash": "~0.1.1",
+    "date-and-time": "^0.4.0",
+    "ejs": "~0.8.5",
+    "express": "~3.4.4",
+    "localStorage": "^1.0.3",
+    "mongoose": "~3.8.1",
+    "passport": "~0.1.17",
+    "passport-facebook": "~1.0.2",
+    "passport-google": "^0.3.0",
+    "passport-google-oauth": "^0.1.5",
+    "passport-local": "~0.1.6",
+    "passport-twitter": "~1.0.2"
+  }
 }

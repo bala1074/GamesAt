@@ -1,0 +1,17 @@
+<% include partials/header %>
+<div class="container">
+
+    <div class="jumbotron text-center">
+        <h1><span class="fa fa-lock"></span> GamesAT </h1>
+
+        <p>Login or Register with:</p>
+
+        <a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
+    </div>
+</div>
+<script>
+        localStorage.setItem("email","0");
+        $('#profile').hide();
+        $('#login').show();
+</script>
+<% include partials/footer %>

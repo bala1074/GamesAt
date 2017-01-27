@@ -1,0 +1,81 @@
+<% include partials/header %>
+<% var profile=JSON.parse(JSON.stringify(profiledata))[0];
+%>
+<script>
+    	localStorage.setItem("nickname", "<%= profile.nickname%>");
+</script>
+<div class="container">
+	<div class="row">
+		<form action="/profile" method="post" class="register-form">
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-lg-4">
+					<label for="firstName">Fullname</label>
+					<input name="firstName" class="form-control" type="text" id="profile_fullname" value="<%=profile.name%>" readonly disabled>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-lg-4">
+					<label for="nickName">Nickname</label>
+					<input name="nickname" class="form-control" type="text" value="<%=profile.nickname%>" >
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-lg-4">
+					<label for="email">Email</label>
+					<input name="email" class="form-control" type="email" id="profile_email" value="<%=profile.email%>" readonly disabled>
+				</div>
+			</div>
+			<!--<div class="row">
+				<div class="col-md-4 col-sm-4 col-lg-4">
+					<label for="password">Password</label>
+					<input name="password" class="form-control" type="password">
+				</div>
+			</div>-->
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-lg-4">
+					<label for="mobile">Mobile</label>
+					<input name="mobile" class="form-control" type="text" value="<%=profile.mobile%>">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-lg-4">
+					<label class="control-label col-sm-3">Gender</label>
+					<div class="form-group">
+                        <%if (profile.gender == 'M') { %>
+						<label class="radio-inline">
+							<input type="radio" id="maleRadio" name="gender" value="M" checked>Male
+						</label>
+                        <% } %>
+                        <%if (profile.gender != 'M') { %>
+						<label class="radio-inline">
+							<input type="radio" id="maleRadio" name="gender" value="M">Male
+						</label>
+                        <% } %>
+                        <%if (profile.gender == 'F') { %>
+						<label class="radio-inline">
+							<input type="radio" id="femaleRadio" name="gender" value="F" checked>Female
+						</label>
+                        <% } %>
+                        <%if (profile.gender != 'F') { %>
+						<label class="radio-inline">
+							<input type="radio" id="femaleRadio" name="gender" value="F">Female
+						</label>
+                        <% } %>
+
+					</div> <!-- /.form-group -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+					<button class="btn btn-default logbutton">Update Profile</button>
+				</div>
+			</div>
+		</form>
+		</div>
+	</div>
+</div>
+<script>
+    /*$('#profile_fullname').val(localStorage.getItem("name"));
+    $('#profile_email').val(localStorage.getItem("email"));*/
+</script>
+<% include partials/footer %>
