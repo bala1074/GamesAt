@@ -5,6 +5,6 @@ Games tracking system
 ## Host A Game, By watching the list of players
 ![Alt text](/screenshots/Host_match.png?raw=true "Optional Title")
 ## Get List of Hosted Games
-![Alt text](/screenshots/Hosted Match.png?raw=true "Optional Title")
+![Alt text](/screenshots/Hosted_Match.png?raw=true "Optional Title")
 ## Join/Unjoin in a Game 
 ![Alt text](/screenshots/Join_Unjoin.png?raw=true "Optional Title")
